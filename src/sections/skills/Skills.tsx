@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Title, Container } from '../../components';
+import { useTranslation } from 'react-i18next';
 
 type SkillSectionProps = {
   skills: {
@@ -9,9 +10,11 @@ type SkillSectionProps = {
 };
 
 const SkillSection = ({ skills }: SkillSectionProps) => {
+  const { t } = useTranslation();
+
   return (
     <div id='skills'>
-      <Title content="Habilidades" />
+      <Title content={t("skills.heading")}  />
       <Container>
         <SkillContainer>
           {skills.map(({ id, title }) => {

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Title, Icon } from '../../components';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 type ServiceSectionProps = {
   services: {
@@ -12,9 +13,11 @@ type ServiceSectionProps = {
 };
 
 const ServiceSection = ({ services }: ServiceSectionProps) => {
+  const { t } = useTranslation();
+
   return (
     <div id="services">
-      <Title content="Servicios"/>
+      <Title content={t("services.heading")}/>
       <CustomContainer>
         <ServiceContainer>
           {services.map(({ id, title, description, icon }, index) => {
@@ -34,8 +37,8 @@ const ServiceSection = ({ services }: ServiceSectionProps) => {
                   <span className="icon_wrap">
                     <Icon value={icon} />
                   </span>
-                  <CardTitle>{title}</CardTitle>
-                  <CardDescription>{description}</CardDescription>
+                  <CardTitle>{t(title)}</CardTitle>
+                  <CardDescription>{t(description)}</CardDescription>
                 </ServiceCard>
               </motion.div>
             );
@@ -63,9 +66,10 @@ const ServiceContainer = styled.div`
   padding: 20px;
 
   .container_motion {
-    flex-basis: calc(50% - 20px);
+    flex-basis: calc(50.8% - 20px);
     box-shadow: 0px 0px 25px rgb(0 0 0 / 18%);
     min-width: 400px;
+    height: 205px;
   }
 
   @media (max-width: 600px) {
@@ -82,7 +86,8 @@ const ServiceCard = styled.div`
   transition: all .3s ease;
   font-weight: 500;
   box-shadow: 0px 0px 25px rgb(0 0 0 / 18%);
-  
+  height: -webkit-fill-available;
+
   .icon_wrap {
     display: grid;
     place-items: center;
@@ -101,11 +106,11 @@ const ServiceCard = styled.div`
 `;
 
 const CardTitle = styled.h1`
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
   text-transform: capitalize;
 `;
 
 const CardDescription = styled.p`
-  font-size: 16px;
+  font-size: 15px;
 `;

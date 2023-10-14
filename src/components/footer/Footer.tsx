@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Icon } from '..';
+import { useTranslation } from 'react-i18next';
 
 type FooterType = {
   phone?: string;
@@ -7,11 +8,13 @@ type FooterType = {
 }
 
 const Footer = ({mail}: FooterType) => {
+  const { t } = useTranslation();
+
   return (
     <CustomFooter>
       <Container>
-        <Title>Espero que te haya gustado mi sitio web.</Title>
-        <Subtitle>Si quieres comunicarte conmigo o estás interesado en mis servicios para algún proyecto, ponte en contacto.</Subtitle>
+        <Title>{t("footer.title")}</Title>
+        <Subtitle>{t("footer.subtitle")}</Subtitle>
         <UserSection>
           <UserInfo>
             <Icon value="mail" color="white"/>
@@ -19,7 +22,7 @@ const Footer = ({mail}: FooterType) => {
           </UserInfo>
         </UserSection>
       </Container>
-      <CopyrightText>Daniel Martinez Copyright (c) 2023 Todos los derechos reservados</CopyrightText>
+      <CopyrightText>Daniel Martinez Copyright (c) {t("footer.copyright_text")}</CopyrightText>
     </CustomFooter>
   );
 };

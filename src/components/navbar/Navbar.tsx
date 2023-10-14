@@ -1,10 +1,12 @@
-import MobileNavbar from './MobileNavbar';
+import { useTranslation } from 'react-i18next';
 import { NavbarProps } from './types';
 import { Container, CustomNavbar, CustomList, CustomLink } from './styles';
+import MobileNavbar from './MobileNavbar';
 
 function Navbar({ navigationLinks, logo }: NavbarProps) {
   const hasLogo = Boolean(logo);
-  
+  const { t } = useTranslation();
+
   return (
     <>
       <Container>
@@ -13,7 +15,7 @@ function Navbar({ navigationLinks, logo }: NavbarProps) {
           <CustomList>
             {navigationLinks.map(({ id, title, link }) => (
               <CustomLink key={id} href={link}>
-                {title}
+                {t(title)}
               </CustomLink>
             ))}
           </CustomList>

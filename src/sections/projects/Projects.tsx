@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Container, Title } from '../../components';
+import { useTranslation } from 'react-i18next';
 
 type ProjectSectionProps = {
   projects: {
@@ -12,15 +13,17 @@ type ProjectSectionProps = {
 };
 
 const ProjectSection = ({ projects }: ProjectSectionProps) => {
+  const { t } = useTranslation();
+
   return (
     <Container id="projects">
       <ProjectContainer>
-        <Title content="Proyectos" />
+        <Title content={t("projects.heading")} />
         <ProjectCards>
           {projects.map(({ id, title, tecnologies, link, image }) => {
             return (
               <ProjectCard key={id} href={link} target='_blank'>
-                <img src={image} alt={title} />
+                <img src={image} alt={title} loading="lazy" />
                 <Content>
                   <Title content={title} />
                   <p>{tecnologies.join(' - ')}</p>
@@ -80,7 +83,7 @@ const ProjectCard = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-basis: calc(33.33% - 20px);
+  flex-basis: calc(33.8% - 20px);
   border-radius: 5px;
   font-weight: 500;
   min-width: 300px;

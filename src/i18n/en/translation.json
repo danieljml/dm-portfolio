@@ -1,0 +1,81 @@
+{
+  "navigation_links": {
+    "about": "About me",
+    "skills": "Skills",
+    "services": "Services",
+    "projects": "Projects"
+  },
+  "profile_summary": {
+    "intro": "<span>Fullstack developer</span> with 5 years of experience in web development, ready to take on new challenges. I specialize in creating websites and applications using the MERN stack.",
+    "sections": {
+      "academic_background": {
+        "heading": "Education",
+        "1": {
+          "title": "Master in Python",
+          "description": "Programming Course from Scratch to Expert: PySide, Tkinter, OOP, Web with Django, Flask, Jinja, SQL Alchemy, Postgresql, and PyCharm, Taught by ING. UBALDO ACOSTA."
+        },
+        "2": {
+          "title": "Master in JavaScript",
+          "description": "Programming Course: JavaScript, jQuery, JSON, TypeScript, Node, Express JS, MongoDB, MEAN, Taught by Víctor Robles."
+        },
+        "3": {
+          "title": "React and Firebase",
+          "description": "Programming Course: Firebase, JSX, Context API, React Hooks, Redux, Taught by Carlos Arturo Esparza."
+        }
+      },
+      "work_background": {
+        "heading": "Education",
+        "1": {
+          "title": "Freelance",
+          "description": "Worked as a programmer in Javascript/TypeScript, React, Node, Express, TDD, Python, Django, MongoDB, and Firebase."
+        },
+        "2": {
+          "title": "Tutenlabs",
+          "description": "Worked using the Scrum methodology, Azure DevOps services, programming in Javascript/Typescript, Node, HTML, CSS, React, TDD (Test-Driven Development), Java, Spring Boot, and PostgreSQL."
+        },
+        "3": {
+          "title": "Black and White Solutions",
+          "description": "Worked using the Scrum methodology and Azure DevOps services. Programming in JavaScript/TypeScript, Node.js, React, React Native, TDD, Next.js, AWS, Firebase, Python, PostgreSQL, Flask, FastAPI, and Django."
+        },
+        "4": {
+          "title": "Variedades monica.ca",
+          "description": "I worked with Figma for designing and implementing applications from scratch using HTML5, CSS3, JavaScript/TypeScript, React, Next, AWS, Firebase, TDD, Node, Express, PHP, Python, and MySQL."
+        }
+      }
+    }
+  },
+  "services": {
+    "heading": "Services",
+    "frontend_development": {
+      "title": "Frontend Development",
+      "description": "I harmoniously balance functionality and design elements in the web interface."
+    },
+    "backend_development": {
+      "title": "Backend Development",
+      "description": "I ensure security and scalability measures effectively in the application from the server side."
+    },
+    "responsive_design": {
+      "title": "Responsive Design",
+      "description": "I skillfully and creatively adapt web design to work seamlessly on mobile devices."
+    },
+    "pixel_perfect": {
+      "title": "Pixel Perfect",
+      "description": "I implement precise code for an exact, pixel-by-pixel reproduction of the original design."
+    }
+  },
+  "skills": {
+    "heading": "Skills"
+  },
+  "projects": {
+    "heading": "Projects"
+  },
+  "footer": {
+    "title": "I hope you liked my website.",
+    "subtitle": "If you want to get in touch with me or are interested in my services for a project, feel free to reach out.",
+    "copyright_text": "2023 All rights reserved"
+  },
+  "theme": {
+    "dark": "Dark mode",
+    "light": "Light mode"
+  }
+}

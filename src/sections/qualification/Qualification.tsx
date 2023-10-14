@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { Title } from '../../components';
+import { useTranslation } from 'react-i18next';
 
 type QualificationProps = {
   qualification: {
     id: number;
     title: string;
     date: string;
-    description?: string;
+    description: string;
     icon?: string;
     link?: string;
     position?: string;
@@ -15,6 +16,8 @@ type QualificationProps = {
 };
 
 const Qualification = ({ title, qualification }: QualificationProps) => {
+  const { t } = useTranslation();
+
   return (
     <QualificationContainer>
       <Title content={title} />
@@ -23,7 +26,7 @@ const Qualification = ({ title, qualification }: QualificationProps) => {
           return (
             <QualificationCard key={id}>
               <Title content={title} />
-              <p>{description}</p>
+              <p>{t(description)}</p>
               <span>{date}</span>
             </QualificationCard>
           );

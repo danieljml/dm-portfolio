@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import Theme from './Theme.tsx';
@@ -6,6 +6,7 @@ import 'material-icons/iconfont/outlined.css';
 import './index.css';
 import { ProviderDarkMode } from './context/darkMode.tsx';
 import { createGlobalStyle } from 'styled-components';
+import './i18n/config.ts';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -19,7 +20,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <ProviderDarkMode>
       <Theme>
         <GlobalStyle />
-        <App />
+        <Suspense fallback="loading">
+          <App />
+        </Suspense>
       </Theme>
     </ProviderDarkMode>
   </React.StrictMode>

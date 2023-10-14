@@ -6,9 +6,12 @@ type DarkModeType = {
 };
 
 const DarkModeContext = createContext<DarkModeType | null>(null);
+const darkModeValue = localStorage.getItem('darkmode');
+
+const initialTheme = darkModeValue ? JSON.parse(darkModeValue) : false;
 
 const ProviderDarkMode = ({ children }: { children: ReactNode }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(initialTheme);
 
   const contextValue = useMemo(() => ({ isDarkMode, setIsDarkMode }), [isDarkMode, setIsDarkMode]);
   return (
