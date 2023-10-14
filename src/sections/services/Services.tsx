@@ -75,6 +75,7 @@ const ServiceContainer = styled.div`
   @media (max-width: 600px) {
     .container_motion {
       min-width: 100%;
+      height: unset;
     }
   }
 `;
