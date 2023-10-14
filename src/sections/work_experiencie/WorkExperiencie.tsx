@@ -6,7 +6,7 @@ type WorkExperiencieProps = {
     id: number;
     title: string;
     date: string;
-    description?: string;
+    description: string;
     icon?: string;
     link?: string;
     position?: string;

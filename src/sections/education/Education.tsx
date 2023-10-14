@@ -8,7 +8,7 @@ type EducationSectionProps = {
     title: string;
     icon?: string;
     date: string;
-    description?: string;
+    description: string;
   }[];
 };
 
