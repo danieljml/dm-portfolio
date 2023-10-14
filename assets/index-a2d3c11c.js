@@ -371,6 +371,7 @@ Error generating stack: `+o.message+`
   @media (max-width: 600px) {
     .container_motion {
       min-width: 100%;
+      height: unset;
     }
   }
 `,VC=$.div`
