@@ -13,7 +13,7 @@ import game from "../assets/Rock-Paper-Scissors.png"
 import construction_web from "../assets/Homepage-Contruction.png"
 import news_web from "../assets/Website-news.png"
 import space_web from "../assets/website-space.png"
-
+import soundnext_web from "../assets/soundnext.png"
 
 export const navigationLinks = [
   { id: 1, title: 'navigation_links.about', link: '#about', icon: 'person' },
@@ -278,5 +278,12 @@ export const projectList = [
     image: space_web,
     tecnologies:  ["Js/Ts", "React"],
     link: "https://danieljml.github.io/space-tourism-website/"
+  },
+  {
+    id: 12,
+    title: 'Website soundnext',
+    image: soundnext_web,
+    tecnologies:  ["html", "css", "Js", "php"],
+    link: "https://danieljml.github.io/soundnext/"
   }
 ]
