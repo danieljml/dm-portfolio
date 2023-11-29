@@ -169,7 +169,7 @@ export const courseList = [
 export const workList = [
   {
     id: 1,
-    date: '2023 - Presente',
+    date: '2023',
     title: 'Freelance',
     position: 'Fullstack Developer',
     description: 'profile_summary.sections.work_background.1.description',
@@ -214,7 +214,7 @@ export const projectList = [
     title: 'Expenses',
     image: expenses,
     tecnologies: ["Js/Ts", "React", "Firebase", "Styled components"],
-    link: "https://app-lista-gastos-425c7.web.app/log-in"
+    link: "https://app-lista-gastos-425c7.web.app/"
   },
   {
     id: 3,
@@ -235,7 +235,7 @@ export const projectList = [
     title: 'Poke master',
     image: poke_master,
     tecnologies:  ["Js/Ts", "React", "Cypress", "Jest", "Styled components"],
-    link: "https://danieljml.github.io/poke-master/login"
+    link: "https://danieljml.github.io/poke-master/"
   },
   {
     id: 6,
