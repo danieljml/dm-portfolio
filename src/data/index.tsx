@@ -14,6 +14,7 @@ import construction_web from "../assets/Homepage-Contruction.png"
 import news_web from "../assets/Website-news.png"
 import space_web from "../assets/website-space.png"
 import soundnext_web from "../assets/soundnext.png"
+import acme_dashboard from "../assets/Acme-dashboard.png"
 
 export const navigationLinks = [
   { id: 1, title: 'navigation_links.about', link: '#about', icon: 'person' },
@@ -204,10 +205,10 @@ export const workList = [
 export const projectList = [
   {
     id: 1,
-    title: 'Rock paper scissors',
-    image: game,
-    tecnologies: ["Js/Ts","React", "Material UI"],
-    link: "https://danieljml.github.io/Rock-Paper-Scissors/"
+    title: 'Acme Dashboard',
+    image: acme_dashboard,
+    tecnologies: ["Next", "Typescript", "Tailwind"],
+    link: "https://nextjs-dashboard-bice-xi.vercel.app/"
   },
   {
     id: 2,
@@ -285,5 +286,12 @@ export const projectList = [
     image: soundnext_web,
     tecnologies:  ["html", "css", "Js", "php"],
     link: "https://danieljml.github.io/soundnext/"
-  }
+  },
+  {
+    id: 13,
+    titl: 'Rock paper scissors',
+    image: game,
+    tecnologies: ["Js/Ts","React", "Material UI"],
+    link: "https://danieljml.github.io/Rock-Paper-Scissors/"
+  },
 ]
