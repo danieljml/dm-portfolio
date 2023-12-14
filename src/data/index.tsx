@@ -289,7 +289,7 @@ export const projectList = [
   },
   {
     id: 13,
-    titl: 'Rock paper scissors',
+    title: 'Rock paper scissors',
     image: game,
     tecnologies: ["Js/Ts","React", "Material UI"],
     link: "https://danieljml.github.io/Rock-Paper-Scissors/"
