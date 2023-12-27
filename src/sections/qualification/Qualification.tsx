@@ -20,7 +20,7 @@ const Qualification = ({ title, qualification }: QualificationProps) => {
 
   return (
     <QualificationContainer>
-      <Title content={title} />
+      <Title content={t(title)} />
       <QualificationCards>
         {qualification.map(({ id, title, description, date }) => {
           return (
@@ -71,7 +71,7 @@ const QualificationCard = styled.div`
   flex-basis: calc(30.5% - 20px);
   padding: 20px;
   border-radius: 5px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   font-weight: 500;
   min-width: 300px;
   box-shadow: 0px 0px 25px rgb(0 0 0 / 18%);

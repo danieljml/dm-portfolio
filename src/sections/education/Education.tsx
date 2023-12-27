@@ -12,16 +12,15 @@ type EducationSectionProps = {
   }[];
 };
 
-const EducationSection = ({education}: EducationSectionProps) => {
+const EducationSection = ({ education }: EducationSectionProps) => {
   return (
-    <>
-      <Container>
-        <Qualification title="Educación" qualification={education}/>
-      </Container>
-    </>
+    <Container>
+      <Qualification
+        title="profile_summary.sections.academic_background.heading"
+        qualification={education}
+      />
+    </Container>
   );
 };
 
 export default EducationSection;
-
-

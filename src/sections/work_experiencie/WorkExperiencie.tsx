@@ -2,7 +2,7 @@ import Qualification from '../qualification/Qualification';
 import { Container } from '../../components';
 
 type WorkExperiencieProps = {
-    workExperiencieList: {
+  workExperiencieList: {
     id: number;
     title: string;
     date: string;
@@ -13,12 +13,15 @@ type WorkExperiencieProps = {
   }[];
 };
 
-
-
-const WorkExperiencieSection = ({workExperiencieList}: WorkExperiencieProps) => {
+const WorkExperiencieSection = ({
+  workExperiencieList,
+}: WorkExperiencieProps) => {
   return (
     <Container>
-      <Qualification title="Experiencia Laboral" qualification={workExperiencieList}/>
+      <Qualification
+        title="profile_summary.sections.work_background.heading"
+        qualification={workExperiencieList}
+      />
     </Container>
   );
 };

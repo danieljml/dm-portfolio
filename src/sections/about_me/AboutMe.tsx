@@ -13,13 +13,18 @@ type AboutMeProps = {
   image: string;
 };
 
-const AboutMeSection = ({ socialLinks, title, content, image}: AboutMeProps) => {
+const AboutMeSection = ({
+  socialLinks,
+  title,
+  content,
+  image,
+}: AboutMeProps) => {
   return (
     <Container id="about">
       <CustomAboutMeContainer>
         <ContentFrame>
           <Title>{title}</Title>
-          <Subtitle dangerouslySetInnerHTML={{ __html: content }}/>
+          <Subtitle dangerouslySetInnerHTML={{ __html: content }} />
           <Social>
             {socialLinks.map(({ id, img, link, alt }) => {
               return (
@@ -31,7 +36,7 @@ const AboutMeSection = ({ socialLinks, title, content, image}: AboutMeProps) => 
           </Social>
         </ContentFrame>
         <PictureFrame>
-          <img src={image} alt="AboutMe-image" />
+          <img src={image} alt="profile" />
           <ShadowImage></ShadowImage>
         </PictureFrame>
       </CustomAboutMeContainer>
@@ -77,7 +82,6 @@ const Title = styled.h1`
   @media (max-width: 1185px) {
     font-size: 38px;
   }
-
 `;
 
 const Subtitle = styled.p`
@@ -134,7 +138,7 @@ const PictureFrame = styled.div`
     img {
       width: 190px;
       border-radius: 50%;
-      box-shadow: 0 0 25px rgba(0,0,0,.18);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.18);
       border: 3px solid ${({ theme }) => theme.colors.primaryBg};
     }
   }
