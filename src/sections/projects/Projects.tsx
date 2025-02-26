@@ -1,43 +1,45 @@
-import styled from 'styled-components';
-import { Container, Title } from '../../components';
-import { useTranslation } from 'react-i18next';
+import styled from 'styled-components'
+import { Container, Title } from '../../components'
+import { useTranslation } from 'react-i18next'
+import ShortUniqueId from 'short-unique-id'
 
 type ProjectSectionProps = {
   projects: {
-    id: number;
-    title: string;
-    tecnologies: string[];
-    image: string;
-    link?: string;
-  }[];
-};
+    id?: number
+    title: string
+    tecnologies: string[]
+    image: string
+    link?: string
+  }[]
+}
 
 const ProjectSection = ({ projects }: ProjectSectionProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
+  const { randomUUID } = new ShortUniqueId({ length: 10 })
 
   return (
     <Container id="projects">
       <ProjectContainer>
-        <Title content={t("projects.heading")} />
+        <Title content={t('projects.heading')} />
         <ProjectCards>
-          {projects.map(({ id, title, tecnologies, link, image }) => {
+          {projects.map(({ id = randomUUID(), title, tecnologies, link, image }) => {
             return (
-              <ProjectCard key={id} href={link} target='_blank'>
+              <ProjectCard key={id} href={link} target="_blank">
                 <img src={image} alt={title} loading="lazy" />
                 <Content>
                   <Title content={title} />
                   <p>{tecnologies.join(' - ')}</p>
                 </Content>
               </ProjectCard>
-            );
+            )
           })}
         </ProjectCards>
       </ProjectContainer>
     </Container>
-  );
-};
+  )
+}
 
-export default ProjectSection;
+export default ProjectSection
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -47,15 +49,14 @@ const ProjectContainer = styled.div`
   gap: 20px;
   padding: 20px;
   z-index: 1;
-`;
+`
 
 const ProjectCards = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-`;
-
+`
 
 const Content = styled.div`
   background-color: ${({ theme }) => theme.colors.backgroundPrimary};
@@ -66,17 +67,16 @@ const Content = styled.div`
   right: 0;
   bottom: 0;
   height: 80%;
-  transition: transform .5s ease; 
+  transition: transform 0.5s ease;
   transform: translateY(100%);
   align-content: center;
   text-transform: capitalize;
-  text-align: center; 
+  text-align: center;
 
   h1 {
     margin-bottom: 0;
   }
 `
-
 
 const ProjectCard = styled.a`
   position: relative;
@@ -88,7 +88,7 @@ const ProjectCard = styled.a`
   font-weight: 500;
   min-width: 300px;
   box-shadow: 0px 0px 25px rgb(0 0 0 / 18%);
-  transition: all .5 ease;
+  transition: all 0.5 ease;
   height: 190px;
   overflow-y: hidden;
 
@@ -106,7 +106,7 @@ const ProjectCard = styled.a`
     font-size: 13px;
   }
 
-  &:hover {    
+  &:hover {
     ${Content} {
       transform: translateY(0);
       display: grid;
@@ -116,4 +116,4 @@ const ProjectCard = styled.a`
   @media (max-width: 600px) {
     min-width: 100%;
   }
-`;
+`

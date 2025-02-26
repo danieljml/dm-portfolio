@@ -1,23 +1,24 @@
 import styled from 'styled-components';
 import { Title, Container } from '../../components';
 import { useTranslation } from 'react-i18next';
+import ShortUniqueId from 'short-unique-id';
 
 type SkillSectionProps = {
   skills: {
-    id: number;
+    id?: number;
     title: string;
   }[];
 };
 
 const SkillSection = ({ skills }: SkillSectionProps) => {
   const { t } = useTranslation();
-
+  const { randomUUID } = new ShortUniqueId({ length: 10 });
   return (
     <div id='skills'>
       <Title content={t("skills.heading")}  />
       <Container>
         <SkillContainer>
-          {skills.map(({ id, title }) => {
+          {skills.map(({ id = randomUUID(), title }) => {
             return <Item key={id}>{title}</Item>;
           })}
         </SkillContainer>

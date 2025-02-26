@@ -1,21 +1,22 @@
-import linkedinIcon from '../assets/linkedin.svg';
-import githubIcon from '../assets/github.svg';
-import whatsappIcon from '../assets/whatsapp.svg';
-import cvIcon from '../assets/cv-48.png';
-import expenses from '../assets/App-Expenses.png';
-import todo_list from '../assets/App-Tareas.png';
-import whatsapp from '../assets/Whatsapp-clone.png';
-import podcast_stream from '../assets/podcast-stream.png';
-import poke_master from '../assets/poke-master.png';
-import weather_app from '../assets/Weather-App.png';
-import github_tracker from '../assets/Github-user-tracker.png';
-import game from '../assets/Rock-Paper-Scissors.png';
-import construction_web from '../assets/Homepage-Contruction.png';
-import news_web from '../assets/Website-news.png';
-import space_web from '../assets/website-space.png';
-import soundnext_web from '../assets/soundnext.png';
-import acme_dashboard from '../assets/Acme-dashboard.png';
-import jm_cv from '../assets/Jesus-CV.png';
+import linkedinIcon from '../assets/linkedin.svg'
+import githubIcon from '../assets/github.svg'
+import whatsappIcon from '../assets/whatsapp.svg'
+import cvIcon from '../assets/cv-48.png'
+import expenses from '../assets/App-Expenses.png'
+import todo_list from '../assets/App-Tareas.png'
+import whatsapp from '../assets/Whatsapp-clone.png'
+import podcast_stream from '../assets/podcast-stream.png'
+import poke_master from '../assets/poke-master.png'
+import weather_app from '../assets/Weather-App.png'
+import github_tracker from '../assets/Github-user-tracker.png'
+import game from '../assets/Rock-Paper-Scissors.png'
+import construction_web from '../assets/Homepage-Contruction.png'
+import news_web from '../assets/Website-news.png'
+import space_web from '../assets/website-space.png'
+import soundnext_web from '../assets/soundnext.png'
+import acme_dashboard from '../assets/Acme-dashboard.png'
+import jm_cv from '../assets/Jesus-CV.png'
+import ac_cv from '../assets/Agustin-CV.png'
 
 export const navigationLinks = [
   { id: 1, title: 'navigation_links.about', link: '#about', icon: 'person' },
@@ -32,7 +33,7 @@ export const navigationLinks = [
     link: '#projects',
     icon: 'folder',
   },
-];
+]
 
 export const socialLinks = [
   {
@@ -55,11 +56,11 @@ export const socialLinks = [
   },
   {
     id: 4,
-    link: 'https://drive.google.com/file/d/1U3yGiLsa7A-CH8y79uZBQEhOMvnDPny0/view?usp=sharing',
+    link: 'https://drive.google.com/file/d/1HuIKL7XguC9weOA8s8GlPGb_ZxigE7vP/view?usp=sharing',
     img: cvIcon,
     alt: 'cv',
   },
-];
+]
 
 export const servicesList = [
   {
@@ -86,78 +87,73 @@ export const servicesList = [
     title: 'services.pixel_perfect.title',
     description: 'services.pixel_perfect.description',
   },
-];
+]
 
 export const skillList = [
   {
     title: 'HTML',
-    id: 1,
   },
   {
     title: 'CSS',
-    id: 2,
   },
   {
-    title: 'Bootstrap',
-    id: 3,
+    title: 'Tailwind',
   },
   {
     title: 'Material UI',
-    id: 4,
   },
   {
     title: 'JavaScript',
-    id: 5,
   },
   {
     title: 'TypeScript',
-    id: 6,
   },
   {
     title: 'Node',
-    id: 7,
   },
   {
     title: 'Express',
-    id: 8,
   },
   {
     title: 'React',
-    id: 9,
+  },
+  {
+    title: 'React Native',
   },
   {
     title: 'Next',
-    id: 10,
+  },
+  {
+    title: 'Jest',
+  },
+  {
+    title: 'Cypress',
   },
   {
     title: 'Python',
-    id: 11,
   },
   {
     title: 'Django',
-    id: 12,
   },
   {
     title: 'FastApi',
-    id: 13,
+  },
+  {
+    title: 'Flask',
   },
   {
     title: 'MYSQL',
-    id: 14,
   },
   {
     title: 'MongoDB',
-    id: 15,
   },
   {
     title: 'Firebase',
-    id: 16,
   },
   {
     title: 'Figma',
-    id: 17,
   },
-];
+]
 
 export const courseList = [
   {
@@ -181,7 +177,7 @@ export const courseList = [
     description: 'profile_summary.sections.academic_background.3.description',
     date: '02/11/2021',
   },
-];
+]
 
 export const workList = [
   {
@@ -212,105 +208,97 @@ export const workList = [
     cardSubtitle: 'UX Designer - Fullstack Developer',
     cardDetailedText: 'profile_summary.sections.work_background.4.description',
   },
-];
+]
 
 export const projectList = [
   {
-    id: 0,
-    title: 'JM - CV',
+    title: 'MedScan MSc Portfolio & App',
+    image: ac_cv,
+    tecnologies: ['Js/Ts', 'Next/React', 'Tailwind', 'Python', 'Flask'],
+    link: 'https://agustin-cartaya.vercel.app/',
+  },
+  {
+    title: 'Design & Architecture Showcase',
     image: jm_cv,
     tecnologies: ['Js/Ts', 'Next/React', 'Tailwind', 'PostgreSQL'],
     link: 'https://jesus-martinez-portafolio.vercel.app/',
   },
   {
-    id: 1,
     title: 'Acme Dashboard',
     image: acme_dashboard,
     tecnologies: ['Js/Ts', 'Next/React', 'Tailwind', 'PostgreSQL'],
     link: 'https://nextjs-dashboard-bice-xi.vercel.app/',
   },
   {
-    id: 2,
     title: 'Expenses',
     image: expenses,
     tecnologies: ['Js/Ts', 'React', 'Firebase', 'Styled components'],
     link: 'https://app-lista-gastos-425c7.web.app/',
   },
   {
-    id: 3,
     title: 'To do list',
     image: todo_list,
     tecnologies: ['Js/Ts', 'React'],
     link: 'https://danieljml.github.io/App-Tareas/',
   },
   {
-    id: 4,
     title: 'Podcast stream',
     image: podcast_stream,
     tecnologies: ['Js/Ts', 'React', 'Jest', 'Styled components'],
     link: 'https://danieljml.github.io/Podcast-stream/',
   },
   {
-    id: 5,
     title: 'Poke master',
     image: poke_master,
     tecnologies: ['Js/Ts', 'React', 'Cypress', 'Jest', 'Styled components'],
     link: 'https://danieljml.github.io/poke-master/',
   },
   {
-    id: 6,
     title: 'Weather app',
     image: weather_app,
     tecnologies: ['Js/Ts', 'React'],
     link: 'https://danieljml.github.io/app-weather/',
   },
   {
-    id: 7,
     title: 'Github user tracker',
     image: github_tracker,
     tecnologies: ['Js/Ts', 'React'],
     link: 'https://danieljml.github.io/github-user-tracker/',
   },
   {
-    id: 8,
     title: 'Whatsapp clone',
     image: whatsapp,
     tecnologies: ['Js/Ts', 'React', 'Firebase', 'Material UI'],
     link: 'https://whatsapp-clone-526b3.web.app/',
   },
   {
-    id: 9,
     title: 'Website news',
     image: news_web,
     tecnologies: ['Js/Ts', 'React'],
     link: 'https://danieljml.github.io/website-news/',
   },
   {
-    id: 10,
     title: 'Website construction',
     image: construction_web,
     tecnologies: ['Js/Ts', 'React'],
     link: 'https://danieljml.github.io/construction-website/',
   },
   {
-    id: 11,
     title: 'Website space',
     image: space_web,
     tecnologies: ['Js/Ts', 'React'],
     link: 'https://danieljml.github.io/space-tourism-website/',
   },
   {
-    id: 12,
     title: 'Website soundnext',
     image: soundnext_web,
     tecnologies: ['html', 'css', 'Js', 'php'],
     link: 'https://danieljml.github.io/soundnext/',
   },
   {
-    id: 13,
     title: 'Rock paper scissors',
     image: game,
     tecnologies: ['Js/Ts', 'React', 'Material UI'],
     link: 'https://danieljml.github.io/Rock-Paper-Scissors/',
   },
-];
+]
